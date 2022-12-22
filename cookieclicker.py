@@ -31,7 +31,7 @@ class CookieClicker:
         time.sleep(5)
     def selecionar_linguagem(self):
         self.driver.find_element("xpath", self.map["buttons"]['lingua']["xpath"]).click()
-        time.sleep(8)
+        time.sleep(10)
     def clicar_biscoito(self):
         self.driver.find_element("xpath", self.map["buttons"]['bisc']["xpath"]).click()
     '''def melhor_upgrade(self):
@@ -59,8 +59,10 @@ biscoito.selecionar_linguagem()
 i = 0 
 while True:
     if i % 500 == 0 and i != 0:
-        time.sleep(1)
+        time.sleep(15)
         biscoito.comprar()
-        time.sleep(1)
+        biscoito.comprar()
+        biscoito.comprar()
+        time.sleep(10)
     biscoito.clicar_biscoito()
     i += 1
